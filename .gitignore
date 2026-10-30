@@ -1,0 +1,20 @@
+# Python & Environnements
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+*.pkl
+*.parquet
+data/
+*.csv
+
+!Outputs/*.csv
+!Outputs/*.png
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
