@@ -21,9 +21,8 @@ Ce projet met en place un pipeline complet de modélisation de la **Prime Pure**
 ---
 
 ## 📊 Résultats et Performances sur l'Échantillon Test
-
 | Modèle | Prime Moy. Prédite (€) | Ratio d'Équilibre | RMSE (€) | MAE (€) | Indice Gini Normalisé |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| :--- | :---: | :---: | :---: | :---: | :---: |
 | **GLM Baseline (NB x Log-Normale)** | 132.15 € | 1.0002 | 5,057.55 € | 1,619.74 € | **0.2847** |
 | **XGBoost Standalone (Tweedie)** | 138.27 € | 1.0463 | 4,840.08 € | 253.21 € | **0.3292** |
 
