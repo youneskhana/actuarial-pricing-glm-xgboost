@@ -85,7 +85,7 @@ ax1.set_facecolor("white")
 fig1.patch.set_facecolor("white")
 
 plt.tight_layout()
-save_fig(fig1, "04_evolution_rmse_iterations")
+save_fig(fig1, "evolution_rmse_iterations")
 
 # --- 6) Graphique 2 : Importance des variables (Gain) -----------------
 # Extraction du score d'importance (Gain)
@@ -117,7 +117,7 @@ ax2.spines["top"].set_visible(False)
 ax2.spines["right"].set_visible(False)
 
 plt.tight_layout()
-save_fig(fig2, "04_importance_variables_tweedie")
+save_fig(fig2, "importance_variables_tweedie")
 
 # --- 7) Sauvegarde des paramètres de calibration ---------------------
 calibration_params = {
