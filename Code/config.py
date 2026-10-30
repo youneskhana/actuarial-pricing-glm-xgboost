@@ -1,13 +1,11 @@
 # =====================================================================
-# 00_config.py  --  Configuration globale du projet
+# config.py  --  Configuration globale du projet
 # Projet : Tarification Automobile Non-Vie (Benchmark GLM vs XGBoost)
 # ---------------------------------------------------------------------
 # Ce script est importé par tous les scripts de modélisation. Il :
 #   - charge les bibliothèques fondamentales,
 #   - détermine la racine du projet (remonte du dossier Code/ vers le parent),
 #   - crée l'arborescence de sortie (data, output/figures, output/tables...),
-#   - définit les paramètres métier de tarification (chargements, réassurance),
-#   - fournit les fonctions utilitaires (sauvegardes, test Khi-2).
 # =====================================================================
 
 import os
@@ -48,15 +46,8 @@ DIR_DERIVED = PROJ / "output" / "derived"
 for d in [DIR_DATA, DIR_FIG, DIR_TAB, DIR_DERIVED]:
     d.mkdir(parents=True, exist_ok=True)
 
-# --- 2. Paramètres Métier de Tarification ----------------------------
+# --- 2. Paramètres de Tarification ----------------------------
 SEUIL_GRAVE  = 10000.0   # Seuil des sinistres "graves" (en euros)
-CHARGE_FRAIS = 0.20      # tau : chargement frais de gestion / commissions (20%)
-CHARGE_SECU  = 0.05      # alpha : chargement de sécurité (5%)
-TAUX_TAXE    = 0.15      # Taxe fiscale sur les conventions d'assurance (15%)
-
-# Traité de réassurance non-proportionnelle (Excess of Loss - XS)
-REA_PRIORITE = 50000.0   # Rétention / Priorité de la cédante
-REA_PORTEE   = 1000000.0 # Portée de la couverture réassureur
 
 # Reproductibilité
 SEED = 2026
@@ -136,5 +127,5 @@ def khi2_adequation(obs_counts: np.ndarray, prob_theo: np.ndarray, n_params: int
         "decision": "Rejet de H0" if D > seuil_5pct else "Non rejet de H0"
     }
 
-print(f"[00_config] Racine du projet configurée : {PROJ}")
-print("[00_config] Configuration tarification chargée.")
+print(f"[config] Racine du projet configurée : {PROJ}")
+print("[config] Configuration tarification chargée.")

@@ -1,5 +1,5 @@
 # =====================================================================
-# check_freq_dist.py -- Test des Lois de Fréquence (Poisson, NB, ZIP, ZINB)
+# check_freq_dist.py -- Test des Lois de Fréquence (Poisson, NB, ZIP)
 # Projet : Tarification Automobile Non-Vie (GLM vs XGBoost)
 # =====================================================================
 
@@ -14,7 +14,7 @@ import statsmodels.api as sm
 import statsmodels.formula.api as smf
 from scipy.stats import poisson, nbinom
 
-print("\n========== - TEST DES LOIS DE FRÉQUENCE (POISSON, NB, ZIP, ZINB) ==========\n")
+print("\n========== - TEST DES LOIS DE FRÉQUENCE (POISSON, NB, ZIP ) ==========\n")
 
 # --- 1) Chargement des données & Sécurisation des tranches -----------
 df_train = load_pkl("df_train")

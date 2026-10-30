@@ -116,7 +116,7 @@ expo_tot = freq['Exposure'].sum()
 nb_sin = freq['ClaimNb'].sum()
 charge_tot = freq['ClaimAmount'].sum()
 
-kpi_portef = pd.DataFrame({
+indicateur_portef = pd.DataFrame({
     "Indicateur": [
         "Exposition (années-risque)", "Nombre de sinistres", "Charge totale (EUR)",
         "Fréquence (sin/an)", "Coût moyen (EUR)", "Prime pure empirique (EUR/an)"
@@ -132,7 +132,7 @@ kpi_portef = pd.DataFrame({
 })
 
 print("\n--- INDICATEURS DU PORTEFEUILLE ---")
-print(kpi_portef.to_string(index=False))
+print(indicateur_portef.to_string(index=False))
 
 # --- 8) Sauvegardes --------------------------------------------------
 save_pkl(freq, "policies_full")
@@ -140,6 +140,6 @@ save_pkl(df_train, "df_train")
 save_pkl(df_val, "df_val")
 save_pkl(df_test, "df_test")
 save_pkl(claims, "claims")
-save_tab(kpi_portef, "01_kpi_portefeuille")
+save_tab(indicateur_portef, "01_indicateur_portefeuille")
 
 print("\n OK - Bases enregistrées (df_train.pkl, df_val.pkl, df_test.pkl, claims.pkl)\n")
