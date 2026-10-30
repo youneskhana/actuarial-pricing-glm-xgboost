@@ -27,7 +27,7 @@ Ce projet met en place un pipeline complet de modélisation de la **Prime Pure**
 | **XGBoost Standalone (Tweedie)** | 138.27 € | 1.0463 | 4,840.08 € | 253.21 € | **0.3292** |
 
 ### Graphique de segmentation par déciles de risque
-![Tarification par décile](output/figures/05_comparaison_d%C3%A9ciles_test.png)
+![Tarification par décile](output/figures/comparaison_d%C3%A9ciles_test.png)
 
 * **Capacité de Segmentation** : XGBoost améliore l'indice de Gini de **+4.45 points** ($0.3292$ vs $0.2847$), démontrant un meilleur ordonnancement des risques.
 * **Prévention de l'Anti-Sélection** : Le GLM sur-tarifiait les premiers déciles. XGBoost épouse plus fidèlement la charge réelle observée sur les déciles 1 à 8.
