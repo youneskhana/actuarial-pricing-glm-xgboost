@@ -1,4 +1,4 @@
-# Tarification Actuarielle Non-Vie : GLM Baseline vs. XGBoost Tweedie
+# Tarification Actuarielle Non-Vie : GLM Baseline vs. XGBoost 
 
 Ce projet met en place un pipeline complet de modélisation de la **Prime Pure** en assurance Automobile Non-Vie, comparant l'approche classique **GLM (Fréquence x Sévérité)** à un algorithme de Machine Learning **XGBoost**.
 
@@ -8,11 +8,11 @@ Ce projet met en place un pipeline complet de modélisation de la **Prime Pure**
 
 1. **Prétraitement & Segmentation** :
    * Découpage du portefeuille en **Train / Validation / Test**.
-   * Prise en compte explicite de l'exposition au risque (`Exposure`) comme pondération.
+   * Prise en compte explicite de l'exposition au risque (`Exposure`) comme offset.
 
 2. **Modèle Baseline GLM (Fréquence x Sévérité)** :
    * **Fréquence** : Binomiale Négative (NB2) avec lien Log.
-   * **Sévérité** : Log-Normale ajustée sur les sinistres attritionnels avec écrêtage (`SEUIL_GRAVE = 10 000 €`).
+   * **Sévérité** : Log-Normale ajustée sur les sinistres attritionnels avec écrêtage (`10 000 €`).
 
 3. **Modèle XGBoost** :
    * Estimation directe de la Prime Pure sur la loi Poisson-Gamma (tweedie).
